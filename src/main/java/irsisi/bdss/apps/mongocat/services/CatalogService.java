@@ -12,4 +12,5 @@ public interface CatalogService {
   //  List<Catalog> findByCategories_Produits_Marque(String nom);
   @Query("{'categories.produits.marque': ?0}")
   List<Catalog> findByMarque(String nom);
+    List<Catalog> findByVilleOrNomOrCategories_Nom(String Ville,String Nom,String CatNom );
 }

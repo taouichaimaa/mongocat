@@ -12,7 +12,7 @@ import java.util.List;
 public interface CatalogRepository extends  MongoRepository<Catalog, String> {
 
     List<Catalog> findByVille(String ville);
-
+List<Catalog> findByVilleOrNomOrCategories_Nom(String Ville,String Nom,String CatNom );
     List<Catalog> findByCategories_Nom(String nom);
    @Query("{'categories.produits.marque': ?0}")
     List<Catalog> findByMarque(String nom);

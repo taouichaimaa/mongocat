@@ -36,6 +36,11 @@ public class CatalogController {
     public List<Catalog> findByProductsMarque(@PathParam("marque") String mark){
 return catalogRepository.findByMarque(mark);
     }
+    @GetMapping("/search/")
+    public List<Catalog> findByMultiRec(@RequestParam(required = false) String ville,@RequestParam(required = false) String nom,@RequestParam(required = false) String catNom){
+        return catalogRepository.findByVilleOrNomOrCategories_Nom(ville,nom,catNom);
+    }
+
 
 
 }

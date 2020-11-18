@@ -31,6 +31,12 @@ List<Catalog> catalogs = new ArrayList<>();
         return catalogs;
     }
 
+    @Override
+    public List<Catalog> findByVilleOrNomOrCategories_Nom(String Ville, String Nom, String CatNom) {
+        catalogs=catrep.findByVilleOrNomOrCategories_Nom(Ville,Nom,CatNom);
+        return catalogs;
+    }
+
 
 
    /* @Override //not working even though f documentation hia likayna
