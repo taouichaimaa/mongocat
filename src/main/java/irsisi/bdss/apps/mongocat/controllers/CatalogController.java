@@ -32,10 +32,10 @@ public class CatalogController {
        return catalogRepository.findByVille(ville);
    }
 
-   /*@GetMapping("/produits/marque")
+   @GetMapping("/produits/marque")
     public List<Catalog> findByProductsMarque(@PathParam("marque") String mark){
-return catalogRepository.findByCategories_Produits_Marque(mark);
-    }*/
+return catalogRepository.findByMarque(mark);
+    }
 
 
 }

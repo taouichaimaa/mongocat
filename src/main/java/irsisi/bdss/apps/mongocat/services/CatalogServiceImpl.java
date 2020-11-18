@@ -25,6 +25,12 @@ List<Catalog> catalogs = new ArrayList<>();
         return catalogs;
     }
 
+    @Override
+    public List<Catalog> findByMarque(String nom) {
+        catalogs=catrep.findByMarque(nom);
+        return catalogs;
+    }
+
 
 
    /* @Override //not working even though f documentation hia likayna
