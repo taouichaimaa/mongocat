@@ -1,14 +1,10 @@
 package irsisi.bdss.apps.mongocat.repositories;
 
 import irsisi.bdss.apps.mongocat.models.Catalog;
-import irsisi.bdss.apps.mongocat.models.Categories;
-import org.springframework.data.mongodb.core.*;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
-import org.springframework.data.repository.RepositoryDefinition;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository

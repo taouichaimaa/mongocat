@@ -1,11 +1,10 @@
 package irsisi.bdss.apps.mongocat.models;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 @Document(collection = "catalog")
 public class Catalog {
@@ -14,12 +13,13 @@ public class Catalog {
     private String nom;
     private String address;
     private String ville;
-    ArrayList<Categories> categories;
+    List<Categorie> categories;
 
     public Catalog() {
 
     }
-    public Catalog(String id, String nom, String address, String ville, ArrayList<Categories> categories) {
+
+    public Catalog(String id, String nom, String address, String ville, List<Categorie> categories) {
         this.id = id;
         this.nom = nom;
         this.address = address;
@@ -59,11 +59,11 @@ public class Catalog {
         this.ville = ville;
     }
 
-    public ArrayList<Categories> getCategories() {
+    public List<Categorie> getCategories() {
         return categories;
     }
 
-    public void setCategories(ArrayList<Categories> categories) {
+    public void setCategories(List<Categorie> categories) {
         this.categories = categories;
     }
 }

@@ -1,15 +1,17 @@
 package irsisi.bdss.apps.mongocat.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Categories {
+
+public class Categorie {
     private String nom;
-    private ArrayList<Produits> produits;
+    private List<Produit> produits;
 
-    public Categories() {
+    public Categorie() {
     }
 
-    public Categories(String nom, ArrayList<Produits> produits) {
+    public Categorie(String nom, ArrayList<Produit> produits) {
         this.nom = nom;
         this.produits = produits;
     }
@@ -22,11 +24,11 @@ public class Categories {
         this.nom = nom;
     }
 
-    public ArrayList<Produits> getProduits() {
+    public List<Produit> getProduits() {
         return produits;
     }
 
-    public void setProduits(ArrayList<Produits> produits) {
+    public void setProduits(List<Produit> produits) {
         this.produits = produits;
     }
 }

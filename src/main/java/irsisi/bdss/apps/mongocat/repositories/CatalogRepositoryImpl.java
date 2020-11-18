@@ -2,7 +2,6 @@ package irsisi.bdss.apps.mongocat.repositories;
 
 import com.mongodb.DBObject;
 import irsisi.bdss.apps.mongocat.models.Catalog;
-import irsisi.bdss.apps.mongocat.models.Categories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;

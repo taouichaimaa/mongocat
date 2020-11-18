@@ -7,11 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 
 @Repository
-public interface CatalogRepository extends  MongoRepository<Catalog, String>, MongoTemplateRepository {
+public interface CatalogRepository extends  MongoRepository<Catalog, String> {
 
     ArrayList<Catalog> findByVille(String ville);
     ArrayList<Catalog> findByCategories_Nom(String nom);
-
-
 
 }
