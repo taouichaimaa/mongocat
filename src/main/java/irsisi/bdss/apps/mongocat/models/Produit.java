@@ -15,7 +15,7 @@ public class Produit {
     private String image;
     private Dimension dimension;
     private List<String> caracteristiques;
-    private List<Reviews> reviews;
+    private List<Review> reviews;
 
     public Produit() {
     }
@@ -26,6 +26,14 @@ public class Produit {
         this.marque = marque;
     }
 
+    public Produit(String ref, String lib, String marque, List<Review> reviews) {
+        this.reference=ref;
+        this.libelle=lib;
+        this.marque=marque;
+        this.reviews=reviews;
+
+    }
+
     public List<String> getCaracteristiques() {
         return caracteristiques;
     }
@@ -34,7 +42,7 @@ public class Produit {
         this.caracteristiques = caracteristiques;
     }
 
-    public Produit(String reference, String libelle, String marque, Double price, int stock, String image, Dimension dimension, List<String> caracteristiques, List<Reviews> reviews) {
+    public Produit(String reference, String libelle, String marque, Double price, int stock, String image, Dimension dimension, List<String> caracteristiques, List<Review> reviews) {
 
         this.reference = reference;
         this.libelle = libelle;
@@ -56,11 +64,11 @@ public class Produit {
     }
 
 
-    public List<Reviews> getReviews() {
+    public List<Review> getReviews() {
         return reviews;
     }
 
-    public void setReviews(List<Reviews> reviews) {
+    public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
 

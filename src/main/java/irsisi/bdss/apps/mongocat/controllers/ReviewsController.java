@@ -1,7 +1,7 @@
 package irsisi.bdss.apps.mongocat.controllers;
 
 import irsisi.bdss.apps.mongocat.models.Catalog;
-import irsisi.bdss.apps.mongocat.models.Reviews;
+
 import irsisi.bdss.apps.mongocat.repositories.ReviewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

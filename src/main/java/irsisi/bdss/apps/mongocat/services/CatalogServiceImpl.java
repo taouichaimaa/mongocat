@@ -6,21 +6,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class CatalogServiceImpl implements CatalogService{
-ArrayList<Catalog> catalogs = new ArrayList<>();
+List<Catalog> catalogs = new ArrayList<>();
 @Autowired
     CatalogRepository catrep;
     @Override
-    public ArrayList<Catalog> findByVille(String ville) {
+    public List<Catalog> findByVille(String ville) {
         catalogs=catrep.findByVille(ville);
         return catalogs;
     }
 
     @Override
-    public ArrayList<Catalog> findByCategories_Nom(String nom) {
+    public List<Catalog> findByCategories_Nom(String nom) {
         catalogs=catrep.findByCategories_Nom(nom);
         return catalogs;
     }
+
+
+
+   /* @Override //not working even though f documentation hia likayna
+    public List<Catalog> findByCategories_Produits_Marque(String nom) {
+        catalogs=catrep.findByCategories_Produits_Marque(nom);
+        return catalogs;
+    }*/
+
 }

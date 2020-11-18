@@ -1,8 +1,9 @@
 package irsisi.bdss.apps.mongocat.models;
 
 
+import java.util.List;
 
-public class Reviews {
+public class Review {
     private String nom;
     private int stars;
     private String commentaire;
@@ -13,11 +14,11 @@ public class Reviews {
          this.stars = stars;
          this.commentaire = commentaire;
      }*/
-    public Reviews() {
+    public Review() {
 
     }
 
-    public Reviews( String nom, int stars, String commentaire) {
+    public Review( String nom, int stars, String commentaire) {
         this.nom = nom;
         this.stars = stars;
         this.commentaire = commentaire;

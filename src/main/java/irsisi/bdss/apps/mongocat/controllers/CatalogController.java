@@ -6,24 +6,36 @@ import irsisi.bdss.apps.mongocat.services.CatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
+@RequestMapping("Catalog")
 public class CatalogController {
-    @Autowired
-    CatalogService catServ;
-    @Autowired
-    CatalogRepository catRepo;
+    final CatalogRepository catalogRepository;
 
-    @GetMapping("/findByCategoryName")
-    public int findByCategoryName(@RequestParam("CategoryName") String Category) {
-//        List<Catalog> CatList;
-//        CatList = catRepo.findByCategoriesName(Category);
-//        if (CatList == null) {
-//            return -1;
-//        }
-//        return CatList.size();
-        return 0;
+
+    public CatalogController(CatalogRepository catalogRepository) {
+        this.catalogRepository = catalogRepository;
     }
+
+    @GetMapping("/all")
+    public List<Catalog> findAll(){
+        return catalogRepository.findAll();
+    }
+   @GetMapping("/nom")
+    public List<Catalog> findByCategoriesContaining(@PathParam("nom") String nom){
+        return catalogRepository.findByCategories_Nom(nom);
+   }
+   @GetMapping("/ville")
+   public List<Catalog> findByVille(@PathParam("ville") String ville){
+       return catalogRepository.findByVille(ville);
+   }
+
+   /*@GetMapping("/produits/marque")
+    public List<Catalog> findByProductsMarque(@PathParam("marque") String mark){
+return catalogRepository.findByCategories_Produits_Marque(mark);
+    }*/
+
+
 }
